@@ -1,0 +1,20 @@
+class Solution {
+    public int[] solution(int n) {
+         // n이 짝수일 경우
+        if(n % 2 == 0)
+        {
+            int[] answer= new int[n / 2];
+            for(int i=0;i<n/2; i++) {
+                answer[i] = 2 * i + 1;
+            }
+            return answer;
+        }
+
+        // n이 홀수일 경우
+        int[] answer = new int[n / 2 + 1];
+        for(int i=0; i<=n/2;i++) {
+            answer[i] = 2 * i + 1;
+        }
+        return answer;
+    }
+}
