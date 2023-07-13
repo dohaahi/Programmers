@@ -1,0 +1,10 @@
+def solution(num_list):
+    answer = [0, 0]
+
+    for i in range(0, len(num_list), 1):
+        if num_list[i] % 2 == 0:
+            answer[0] += 1
+        else:
+            answer[1] += 1
+
+    return answer
