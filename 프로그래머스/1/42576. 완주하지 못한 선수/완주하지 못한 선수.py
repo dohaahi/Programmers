@@ -1,10 +1,7 @@
 from collections import Counter
 
 def solution(participant, completion):
-    p = Counter(participant)
-    c = Counter(completion)
-
-    result = (p - c).items()
-    
-    for k, v in result:
-        return k
+    p_count = Counter(participant)
+    c_count = Counter(completion)
+    result = p_count - c_count
+    return list(result.keys())[0]
