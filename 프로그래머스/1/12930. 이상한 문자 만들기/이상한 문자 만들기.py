@@ -1,14 +1,17 @@
-def solution(s):
-    answer = []
+def solution(str):
+    answer = ''
 
-    s = s.upper().split(' ')
-    for ss in s:
-        cen = ''
-        for j in range(len(ss)):       
-            if j % 2 != 0:
-                cen+=ss[j].lower()
-                continue
-            cen+=ss[j]
-        answer.append(cen)
+    i = 0
+    for s in str.lower():
+        if s == ' ':
+            i = 0
+            answer += ' '
 
-    return ' '.join(answer)
+        else:
+            if i % 2 == 0:
+                answer += s.upper()
+            else:
+                answer += s
+            i += 1
+
+    return answer
